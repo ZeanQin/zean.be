@@ -3,7 +3,7 @@ Date: 13:10 22nd Jan 2017
 Modified: 13:10 22nd Jan 2017
 Category: Introduction
 Tags: Introduction
-Slug: hello-world
+Slug: hello_world
 Authors: Zean Qin
 Summary: My first post!
 
