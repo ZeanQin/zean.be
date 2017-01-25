@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Zean Qin - Tools</title><link href="http://zean.be/" rel="alternate"></link><link href="http://zean.be/feeds/tools.atom.xml" rel="self"></link><id>http://zean.be/</id><updated>2017-01-25T13:02:00+11:00</updated><entry><title>Atom for Markdown editing</title><link href="http://zean.be/posts/atom_for_markdown_editing%20Authors:%20Zean%20Qin/" rel="alternate"></link><published>2017-01-25T13:02:00+11:00</published><updated>2017-01-25T13:02:00+11:00</updated><author><name>Zean Qin</name></author><id>tag:zean.be,2017-01-25:/posts/atom_for_markdown_editing Authors: Zean Qin/</id><summary type="html">&lt;p&gt;My setup of Atom for Markdown editing.&lt;/p&gt;</summary><content type="html">&lt;p&gt;Below is the Atom setup I have been using for Markdown editing.&lt;/p&gt;
+&lt;h2&gt;Markdown support&lt;/h2&gt;
+&lt;p&gt;Atom has a variety of community generated packages that can be installed to provide additional functionality. Here are the ones I recommend:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/markdown-writer"&gt;markdown-writer&lt;/a&gt;: Adds a bunch of keyboard commands for things like text formatting and creating links &amp;amp; images, along with support for popular static site blogging platforms.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/markdown-scroll-sync"&gt;markdown-scroll-sync&lt;/a&gt;: Makes the rendered preview scroll in sync with the Markdown view.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/markdown-format"&gt;markdown-format&lt;/a&gt;: Makes your Markdown pretty when you save. Things like renumbering lists so they are actually in order (vs. the 1, 2, 3, 5, 5, 5, 8, 9 I always seem to end up with,) and padding cells in GitHub Flavored Markdown tables so they are more readable.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://atom.io/packages/tool-bar-markdown-writer"&gt;tool-bar-markdown-writer&lt;/a&gt; and &lt;a href="https://atom.io/packages/tool-bar"&gt;tool-bar&lt;/a&gt;: tool-bar-markdown-writer adds markdown editing buttons. And you will need to first install the tool-bar plugin to make it appear.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Installing packages&lt;/h2&gt;
+&lt;p&gt;Once you’ve installed Atom.io, to install these or any other packages, perform the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;From the File menu, select Settings, then Install. Enter the name of the package you wish to install (or part of the name, such as Markdown to see all packages that contain that word.)&lt;/li&gt;
+&lt;li&gt;Click the Install button beside the package. If you want to read more about the package before installing, click the title of the package and it will open your browser and display more information.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Configuration&lt;/h2&gt;
+&lt;p&gt;Once installed, you can use the &lt;strong&gt;Packages&lt;/strong&gt; tab from &lt;strong&gt;Settings&lt;/strong&gt; to disable, enable, or configure packages.&lt;/p&gt;
+&lt;p&gt;While some packages have their own configuration, you will also want to look at &lt;strong&gt;File&lt;/strong&gt;, &lt;strong&gt;Settings&lt;/strong&gt;, &lt;strong&gt;Settings&lt;/strong&gt; to configure the following settings for Markdown authoring:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tab length&lt;/strong&gt;: If &lt;strong&gt;Soft tabs&lt;/strong&gt; is enabled, then you should set this to 4 since Markdown expects either a single tab or 4 spaces when indenting.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Soft wrap, Soft wrap and preferred line length, and Preferred line length&lt;/strong&gt;: This causes the editor to wrap lines at the specified line length. Otherwise, paragraphs will scroll off the editor to the right. Makes things much more readable, especially when the preview window is open.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This last one is a matter of preference. Markdown-Writer does its own special thing with the tab key for indention. In the current version, on Windows, it only seems to indent in a list, while I want it to indent everywhere when I hit the tab key. You can override the current Markdown-Writer functionality by doing the following:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;File&lt;/strong&gt;, &lt;strong&gt;Settings&lt;/strong&gt;, &lt;strong&gt;Keybindings&lt;/strong&gt;, then click the link to your &lt;strong&gt;keymap&lt;/strong&gt; file at the top of the page.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Add the following new lines to the end of the &lt;strong&gt;keymap.cson&lt;/strong&gt; file:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt; ‘atom-text-editor[data-grammar~=\’gfm\’]’:&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;‘tab’: ‘editor:indent’ 
+&lt;p&gt;This restores normal tab functionality for Markdown editing. &lt;strong&gt;NOTE&lt;/strong&gt;: If you’re using something like Markdown-Format, it may convert 4 spaces to tabs automatically when you save.&lt;/p&gt;
+
+
+&lt;h2&gt;Tips&lt;/h2&gt;
+&lt;p&gt;To toggle the Markdown preview, use ctrl-shift-m.&lt;/p&gt;
+&lt;p&gt;If you’ve opend Atom to a specific folder, and it’s showing the tree view side bar, you can dismiss it with ctrl-.&lt;/p&gt;
+&lt;p&gt;Atom.io checks for package updates automatically. If you see a blue box in the lower right-hand corner, that means some packages have been updated. Click on the blue box to install them.&lt;/p&gt;
+&lt;p&gt;If you’re working in a folder that contains a lot of Markdown files, don’t even try using the tree view. It’s 100x easier to use ctrl-t and then start typing the file name you want to open. This will search through the directory structure for files that match the text you’ve entered, and you can then click the one you want.&lt;/p&gt;
+&lt;p&gt;If you need to change the indentation for a section of text (for example, a section of source code,) just select it and hit ctrl-[ or ] to change the indent level.&lt;/p&gt;</content><category term="Technical"></category><category term="Tool"></category><category term="Markdown"></category><category term="Atom Introduction"></category></entry></feed>
